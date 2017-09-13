@@ -43,7 +43,7 @@ gulp.task('htmlminscriptmin', function() {
 
 // Sass task without minifying
 gulp.task('sass', function() {
-	gulp.src('app/styles/*.scss')
+	gulp.src('app/styles/main.scss')
 		.pipe(plumber())
 		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', sass.logError))
@@ -54,7 +54,7 @@ gulp.task('sass', function() {
 
 // Sass
 gulp.task('sassmin', function() {
-	gulp.src('app/styles/*.scss')
+	gulp.src('app/styles/main.scss')
 		.pipe(plumber())
 		.pipe(sass().on('error', sass.logError))
 		.pipe(autoPrefixer({
@@ -93,7 +93,8 @@ gulp.task('watch', function() {
 	gulp.watch('app/fonts/*', ['fonts']);
 	gulp.watch('app/images/*', ['images']);
 	gulp.watch('app/*.html', ['htmlscript']);
-	gulp.watch('app/styles/*.scss', ['sass']);
+	gulp.watch('app/styles/**/*.scss', ['sass']);
+	gulp.watch('app/scripts/**/*.js', ['htmlscript']);
 });
 
 // Serve Task

@@ -1,0 +1,57 @@
+#about {
+
+}
+
+#about-personal-info {
+	text-align: center;
+	text-transform: uppercase;
+
+	> img {
+		border-radius: 5px;
+		width: 100%;
+	}
+
+	> h3 {
+		letter-spacing: 2px;
+		font-weight: bold;
+		padding-top: 10px;
+	}
+
+	> strong {
+		display: block;
+		margin-top: 10px;
+		font-size: 16px;
+	}
+
+	> h5 {
+		font-size: 14px;
+		color: #888;
+	}
+}
+
+ul.nav {
+	> li {
+		width: 33.33333333333%;
+
+		> a {
+			color: #000000;
+			text-align: center;
+			transition: all 0.5s;
+		}
+
+		a:hover {
+			transition: all 0.5s;
+		}
+
+		> a:last-of-type {
+			margin-right: 0px;
+		}
+	}
+}
+
+.tab-pane {
+	padding: 35px 20px 0px 20px;
+	font-size: 18px;
+	font-weight: 300;
+	text-align: justify;
+}

@@ -9,14 +9,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="description" content="">
-    <meta name="application-name" content="Simple Project">
-    <meta name="msapplication-TileColor" content="#333333 " />
-    <meta name="msapplication-TileImage" content="" />
+    <meta name="application-name" content="Ernests Millers">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="HandheldFriendly" content="true"/>   
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Simple Project</title>
+    <title>Ernests Millers</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -25,9 +24,321 @@
 	<!--[if IE]>
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
-    <h1>Hello World</h1>
-     
+
+    <div id="loader">
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+    </div>
+        
+    <!-- Navigation -->
+    <nav>
+        
+    </nav>
+    <!-- Navigation End -->
+
+    <!-- Landing Section -->
+    <section id="landing">
+        <div id="landing-box">
+            <h3>Hello, it's me</h3>
+            <h1>Ernest Miller</h1>
+            <h3>Web Developer</h3>
+            <a href="#about">Read More</a>
+            <a href="#portfolio">Portfolio</a>
+        </div>
+    </section>
+    <!-- Landing Section End -->
+
+    
+    <!-- About Section -->
+    <section id="about" class="fade">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 section-head">
+                    <h5>About</h5>
+                    <h2>Introduction</h2>
+                    <p>I am a web developer from Bournemouth, United Kingdom. <br>
+                    I'm always looking for new and exciting opportunities and I am ready for any challange thrown at me!</p>
+                </div>                
+            </div>
+            <div class="row">
+                <div class="col-sm-3" id="about-personal-info">
+                    <img src="images/me.jpg" alt="">
+                    <h3>Personal Info</h3>
+                    <div class="heading-line"></div>
+                    <strong>E-mail:</strong>
+                    <h5>ernestsmillers@gmail.com</h5>
+                    <strong>Phone Number:</strong>
+                    <h5>07771186717</h5>
+                </div>
+                <div class="col-sm-8 col-sm-offset-1" id="about-tabs">
+                     <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation"  class="active"><a href="#tab-my-story" aria-controls="tab-my-story" role="tab" data-toggle="tab">My Story</a></li>
+                        <li role="presentation"><a href="#tab-personality" aria-controls="tab-personality" role="tab" data-toggle="tab">Personality</a></li>
+                        <li role="presentation"><a href="#tab-blog" aria-controls="tab-blog" role="tab" data-toggle="tab">Blog</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="tab-my-story">
+                        Since I was very young I have explored the unknown within <strong>computer science</strong>. I joined a computer science club at the age of 7 and I soon started coding in BASIC, before I advanced to Pascal language. <br><br>
+
+                        I jumped from one field to another trying to find one that fits me best and I ended up in Web Development, earlier I had tried game development, <strong>ethical hacking</strong>, and 3D design. I have studied web development for a long time now and I am on my way to becoming a <strong>professional</strong> with excellent knowledge of my toolset and providing the highest standards of coding practices. <br><br>
+
+                        <strong>I love web development</strong> because I can work with both designs and complex algorithms - it never stops changing. 
+                        </div>
+                            
+                        <div role="tabpanel" class="tab-pane" id="tab-personality">
+                        I am a <strong>hard-working</strong> individual who is always looking for new and exciting opportunities within web development. <br><br>
+
+                        I have always been organised, detail oriented, independent and motivated so I believe that the career I've chosen is a great fit for me. I do enjoy working <strong>in a team or on my own</strong>, I am never afraid of introducing new approaches to finish a specific task. I never settle and always search for ways to <strong>improve</strong> to provide the best possible results. <br><br>
+
+                        I am self-motivated because I have learnt the majority of my web development knowledge myself and I was <strong>able to withstand any obstacles</strong> in my way. I think that is what a <strong>successful web developer</strong> should be, there are thousands of new languages, libraries, technologies coming out every day and I will be there to take on the challenge.
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="tab-blog">
+                        I am always looking for ways to <strong>increase my knowledge</strong> in a variety of different fields. <br><br>
+
+                        Recently, I decided that starting a blog could be one of the ways to increase my <strong>writing skills.</strong> My goal is to write about all sorts of web development technologies, projects, and books - all things that I'm interested in. <br><br>
+
+                        I hope that with time my opinion will matter more and <strong>as I climb higher</strong> in the industry I will be able to make use of my acquired writing skills in everyday tasks.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Landing Section End -->
+
+
+    <!-- Skills Section -->
+    <section id="skills" class="blue-section fade">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 section-head">
+                    <h5>Skills</h5>
+                    <h2>General Web Skills</h2>
+                    <p>I have worked on both front-end and back-end projects. Currently, I am advancing on higher standard frameworks, coding practices, and OOP PHP and JavaScript.</p>
+                </div>
+            </div>
+            <div class="row" id="skills-charts">
+                <div class="col-sm-3 col-xs-6">
+                    <div class="chart" data-percent="90">90%</div>
+                    <h3>HTML5</h3>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <div class="chart" data-percent="85">85%</div>
+                    <h3>CSS3</h3>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <div class="chart" data-percent="70">70%</div>
+                    <h3>JS</h3>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <div class="chart" data-percent="60">60%</div>
+                    <h3>PHP7</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 section-head" id="other-skills">
+                    <h2>Other Skills</h2>
+                    <p>I am trying to be more versatile by learning the fundamentals of web design as well as advanced web development.</p>
+                </div>
+            </div>
+            <div class="row" id="skills-bars">
+                <div class="col-sm-5">
+                    <h3>Web</h3>
+                    <div class='bar_group group_ident-1' max="100">
+                        <div class='bar_group__bar thick elastic' label='SASS' show_values='true' tooltip='true' value='80' unit="%"></div>
+                        <div class='bar_group__bar thick elastic' label='jQuery' show_values='true' tooltip='true' value='90' unit="%"></div>
+                        <div class='bar_group__bar thick elastic' label='Laravel' show_values='true' tooltip='true' value='45' unit="%"></div>
+                    </div>
+                </div>
+                <div class="col-sm-5 col-sm-offset-2">
+                    <h3>Graphics</h3>
+                    <div class='bar_group' max="100">
+                        <div class='bar_group__bar thick elastic' label='Photoshop' show_values='true' tooltip='true' value='70' unit="%"></div>
+                        <div class='bar_group__bar thick elastic' label='Illustrator' show_values='true' tooltip='true' value='45' unit="%"></div>
+                        <div class='bar_group__bar thick elastic' label='Gimp' show_values='true' tooltip='true' value='30' unit="%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Skills Section End -->
+    
+    
+    <!-- Blog Section -->
+    <section id="blog" class="fade">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 section-head">
+                    <h5>Blog</h5>
+                    <h2>Recent Blog Posts</h2>
+                    <p>I read new articles, books and expand my resources every day. Feel free to ask me for a public opinion or to review a certain book.</p>
+                </div>
+            </div>
+            <div class="row" id="blog-posts">
+                <div class="col-sm-4">
+                    <div class="thumbnail">
+                        <img src="http://via.placeholder.com/450x350" alt="...">
+                        <div class="caption">
+                            <h3>Blog Title</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu risus nisl. Cras convallis...</p>
+                            <a href="" class="blog-link"><p>Read More</p></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="thumbnail">
+                        <img src="http://via.placeholder.com/450x350" alt="...">
+                        <div class="caption">
+                            <h3>Blog Title</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu risus nisl. Cras convallis...</p>
+                            <a href="" class="blog-link"><p>Read More</p></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="thumbnail">
+                        <img src="http://via.placeholder.com/450x350" alt="...">
+                        <div class="caption">
+                            <h3>Blog Title</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu risus nisl. Cras convallis...</p>
+                            <a href="" class="blog-link"><p>Read More</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Section End -->
+    
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="blue-section fade">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 section-head">
+                    <h5>Portfolio</h5>
+                    <h2>Recent Work</h2>
+                    <p>I am currently working on my own projects to improve my knowledge but fairly soon I will start doing any freelance projects I can get my hands on!</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div id="isotope-controls">
+                        <div class="btn btn-default" data-filter="*">All</div>
+                        <div class="btn btn-default" data-filter=".front-end">Front-End</div>
+                        <div class="btn btn-default" data-filter=".back-end">Back-End</div>
+                        <div class="btn btn-default" data-filter=".laravel">Laravel</div>
+                    </div>
+                    <div class="grid" id="isotope-items">
+                        <div class="grid-item front-end back-end laravel">
+                            <img src="http://via.placeholder.com/250x150" alt="...">
+                            <h3>Blog</h3>
+                        </div>
+                        <div class="grid-item front-end back-end">
+                            <img src="http://via.placeholder.com/250x150" alt="...">
+                            <h3>Current website</h3>
+                        </div>
+                        <div class="grid-item front-end back-end">
+                            <img src="http://via.placeholder.com/250x150" alt="...">
+                            <h3>Previous Portfolio Website</h3>
+                        </div>
+                        <div class="grid-item front-end">
+                            <img src="http://via.placeholder.com/250x150" alt="...">
+                            <h3>First Portfolio Website</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Portfolio Section End -->
+    
+
+    <!-- Contact Section -->
+    <section id="contact" class="fade">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 section-head">
+                    <h5>Contact</h5>
+                    <h2>Get In Touch</h2>
+                    <p>I am always excited to jump into new projects. If you have a question or you are looking for advice I would always love to help out.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Your Name</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Your Email</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-lg btn-default btn-block">Send Your Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section End -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div id="social">
+                        <div class="clearfix">
+                            <div class="social-icon">
+                                <a href="https://www.facebook.com/ernests.millers"><img src="images/facebook.png" alt=""></a>
+                                <h4>Facebook</h4>
+                            </div>
+                            <div class="social-icon">
+                                <a href="https://www.linkedin.com/in/ernests-millers-12731ab6/?ppe=1"><img src="images/linkedin.png" alt=""></a>
+                                <h4>LinkedIn</h4>
+                            </div>
+                            <div class="social-icon">
+                                <a href="https://github.com/ErnestsMillers"><img src="images/github.png" alt=""></a>
+                                <h4>GitHub</h4>
+                            </div>
+                            <div class="social-icon">
+                                <a href="https://twitter.com/ernestsmillers"><img src="images/twitter.png" alt=""></a>
+                                <h4>Twitter</h4>
+                            </div>
+                            <div class="social-icon">
+                                <a href="https://plus.google.com/u/0/111264496310279404813"><img src="images/googleplus.png" alt=""></a>
+                                <h4>Google Plus</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="copy">
+                        <span>&copy; 2017 All Rights Reserved. Developed by Ernests Millers</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+
 	<!-- build:js scripts/main.js -->
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+    <script src="../node_modules/isotope-layout/dist/isotope.pkgd.min.js"></script>
+    <script src="../bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
+    <script src="scripts/vendor/bars.js"></script>
+    <script src="scripts/vendor/particles.min.js"></script>
+    <script src="scripts/particles.js"></script>
+    <script src="scripts/main.js"></script>
 	<!-- endbuild -->
 	</body>
 </html>

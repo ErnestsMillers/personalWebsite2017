@@ -1,0 +1,113 @@
+.chart canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.chart {
+text-align: center;
+  position: relative;
+  display: inline-block;
+  color: #000;
+  font-size: 24px;
+  height: 160px;
+  width: 160px;
+  text-align: center;
+  line-height: 160px;
+}
+
+#skills {
+	position: relative;
+    z-index: 10000;
+
+}
+
+#skills-charts {
+
+	> div {
+		text-align: center;
+		
+		> h3 {
+			margin-top: 12px;
+			font-size: 28px;
+		}
+	}
+}
+
+#other-skills {
+	margin-top: 40px;
+}
+
+#skills-bars {
+	h3 {
+		margin-bottom: 30px;
+		font-weight: 300;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 28px;
+	}
+}
+
+.bar_group__bar.thick.elastic {
+	background: #536dfe !important;
+	margin-bottom: 60px !important;
+}
+
+body .bar_group__bar.thick::before {
+    background: #ffffff !important;
+}
+
+body .bar_label_min {
+	font-size: 14px !important;
+	margin-top: 15px;
+}
+
+body .bar_label_max {
+	font-size: 14px !important;
+	margin-top: 15px;
+}
+
+body .b_label {
+	display: inline-block;
+    border: 1px solid #fff;
+	font-size: 14px !important;
+	padding: 8px 30px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    background: #ffffff;
+    margin-bottom: 15px !important;
+}
+
+body .b_label:hover {
+	transition: all 0.5s;
+	background-color: #e8eaf6;
+	color: #000000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+body .b_label, body .bar_label_min, body .bar_label_max, body .b_tooltip span {
+    color: #000000 !important;
+    font-size: 10px;
+}
+
+body .b_tooltip {
+	background: #ffffff !important;
+	line-height: 13px !important;
+
+	left: 99% !important;
+    -webkit-transform: translateX(-50%) translateY(-350px) !important;
+    -ms-transform: translateX(-50%) translateY(-35px) !important;
+    transform: translateX(-50%) translateY(-35px) !important;
+
+	.b_tooltip--tri {
+		border-color: #ffffff transparent transparent transparent !important;
+	}
+}
+
+body .b_tooltip span {
+    color: #000000 !important;
+    font-size: 12px !important;
+}

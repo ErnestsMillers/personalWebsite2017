@@ -1,0 +1,50 @@
+footer {
+	padding: 100px 0px 100px 0px;
+	background: #2f4050;
+	color: #ffffff;
+}
+
+#social {
+	text-align: center;
+	margin: 0 auto;
+	width: 60%;
+
+	> div {
+		display: flex;
+		justify-content: space-between;
+		padding-left: 0;
+		list-style-type: none;
+		text-align: center;
+	}
+}
+
+.social-icon {
+	width: 90px;
+	float: left;
+
+	> a {
+		height: 60px;
+		width: 60px;
+
+		> img {
+			transition: all 0.4s;
+			height: 60px;
+			width: 60px;
+		}
+
+		> img:hover {
+			transition: all 0.4s;
+			transform: rotate(360deg);
+			border-radius: 100px;
+		}
+	}
+
+	> h4 {
+		text-align: center;
+	}
+}
+
+#copy {
+	margin-top: 50px;
+	text-align: center;
+}
