@@ -7,11 +7,25 @@
 		transition: 0.5s;
 		padding: 0;
 
-		img {
+		.thumbnail-image {
+			height: 250px;
+			overflow: hidden;
+
+			img {
+				cursor: pointer;
+				top: -30px;
+				position: relative;
+				min-width: 100%;
+				min-height: 280px;
+			}
 		}
+
+	
 
 		> .caption {
 			padding: 0px 30px 20px;
+			min-height: 180px;
+
 			h3 {
 
 			}

@@ -37,33 +37,34 @@
         
     <!-- Navigation -->
     <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#landing"><i class="fa fa-home" aria-hidden="true" id="navbar-brand"></i></a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav" id="centered-nav">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#" id="go-to-blog">Go To Blog <i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#landing"><i class="fa fa-home" aria-hidden="true" id="navbar-brand"></i></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav" id="centered-nav">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#" id="go-to-blog" data-toggle="modal" data-target="#blog-modal">Go To Blog <i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
     <!-- Navigation End -->
 
     <!-- Landing Section -->
@@ -208,31 +209,37 @@
             <div class="row" id="blog-posts">
                 <div class="col-sm-4 each">
                     <div class="thumbnail">
-                        <img src="http://via.placeholder.com/450x350" alt="...">
+                        <div class="thumbnail-image">
+                            <img src="/images/laravel.png" alt="..." data-toggle="modal" data-target="#blog-modal">
+                        </div>
                         <div class="caption">
-                            <h3>Blog Title</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu risus nisl. Cras convallis...</p>
-                            <a href="" class="blog-link"><p>Read More</p></a>
+                            <h3>Laravel Adventures</h3>
+                            <p>Laravel is absolutely amazing, I love the environment, my Vagrant setup and can't wait to jump into Vue.Js...</p>
+                            <a href="#" class="blog-link" data-toggle="modal" data-target="#blog-modal"><p>Read More</p></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4 each">
                     <div class="thumbnail">
-                        <img src="http://via.placeholder.com/450x350" alt="...">
+                        <div class="thumbnail-image">
+                            <img src="/images/javascript-and-jquery-book.png" alt="..." data-toggle="modal" data-target="#blog-modal">
+                        </div>
                         <div class="caption">
-                            <h3>Blog Title</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu risus nisl. Cras convallis...</p>
-                            <a href="" class="blog-link"><p>Read More</p></a>
+                            <h3>JavaScript/jQuery Book</h3>
+                            <p>Well, this is second time me reading this book, it has so much valuable information you can't remember all of it...</p>
+                            <a href="#" class="blog-link" data-toggle="modal" data-target="#blog-modal"><p>Read More</p></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4 each">
                     <div class="thumbnail">
-                        <img src="http://via.placeholder.com/450x350" alt="...">
+                        <div class="thumbnail-image">
+                            <img src="/images/htmlcsscodingguidelines.gif" alt="..." data-toggle="modal" data-target="#blog-modal">
+                        </div>
                         <div class="caption">
-                            <h3>Blog Title</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu risus nisl. Cras convallis...</p>
-                            <a href="" class="blog-link"><p>Read More</p></a>
+                            <h3>HTML/CSS Coding Guidelines</h3>
+                            <p>Recently, I found out about these O'Reilly 'Little Books', they are for free and they can be about anything...</p>
+                            <a href="#" class="blog-link" data-toggle="modal" data-target="#blog-modal"><p>Read More</p></a>
                         </div>
                     </div>
                 </div>
@@ -326,15 +333,13 @@
                 <div class="col-xs-12 col-sm-8 col-sm-offset-2">
                     <form>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Your Name</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Your Name">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Your Email</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Your Email">
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" rows="3"></textarea>
+                            <textarea class="form-control" rows="3" placeholder="Your Message Here"></textarea>
                         </div>
                         <button type="submit" class="btn btn-lg btn-default btn-block">Send Your Message</button>
                     </form>
@@ -381,6 +386,26 @@
         </div>
     </footer>
     <!-- Footer End -->
+
+    <!-- Blog Modal -->
+
+    <div class="modal fade" id="blog-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Hey there!</h4>
+                </div>
+                <div class="modal-body">
+                    <h3>Thanks for clicking here!</h3><br>
+                    <p>I am afraid that blog is not quite ready. But don't worry I am probably working on it right now! The blog is being created with Laravel and will be joined with this website. <br><br></p>
+                    <h4>Stay tuned, it's coming!</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog Modal End -->
 
 
 	<!-- build:js scripts/main.js -->

@@ -1,8 +1,8 @@
 
 $(function() {
-	$('.spinner').delay(1000).slideUp(function() {
+	// $('.spinner').delay(1000).slideUp(function() {
     	$('#loader').fadeOut(2000);
-	});
+	// });
 
     var $grid = $('.grid').isotope({
         itemSelector: '.grid-item',

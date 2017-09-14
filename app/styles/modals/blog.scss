@@ -1,0 +1,35 @@
+#blog-modal {
+	.modal-dialog {
+
+		margin-top: 200px;
+
+		.modal-content {
+			border-radius: 0;
+			
+			.modal-header {
+
+				button {
+
+				}
+				h4 {
+
+				}
+			}
+
+			.modal-body {
+				text-align: center;
+
+				p {
+					text-align: justify;
+				}
+			}
+
+			.modal-footer {
+
+				button {
+
+				}
+			}
+		}
+	}
+}
