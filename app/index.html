@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 
-	<body>
+	<body data-spy="scroll" data-target="#bs-example-navbar-collapse-1">
 	<!--[if IE]>
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
@@ -36,9 +36,34 @@
     </div>
         
     <!-- Navigation -->
-    <nav>
-        
-    </nav>
+    <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#landing"><i class="fa fa-home" aria-hidden="true" id="navbar-brand"></i></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav" id="centered-nav">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#" id="go-to-blog">Go To Blog <i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
     <!-- Navigation End -->
 
     <!-- Landing Section -->
@@ -55,7 +80,7 @@
 
     
     <!-- About Section -->
-    <section id="about" class="fade">
+    <section id="about" class="scrollreveal">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 section-head">
@@ -66,7 +91,7 @@
                 </div>                
             </div>
             <div class="row">
-                <div class="col-sm-3" id="about-personal-info">
+                <div class="col-sm-3 scrollreveal" id="about-personal-info">
                     <img src="images/me.jpg" alt="">
                     <h3>Personal Info</h3>
                     <div class="heading-line"></div>
@@ -75,7 +100,7 @@
                     <strong>Phone Number:</strong>
                     <h5>07771186717</h5>
                 </div>
-                <div class="col-sm-8 col-sm-offset-1" id="about-tabs">
+                <div class="col-sm-8 col-sm-offset-1 scrollreveal" id="about-tabs">
                      <ul class="nav nav-tabs" role="tablist">
                         <li role="presentation"  class="active"><a href="#tab-my-story" aria-controls="tab-my-story" role="tab" data-toggle="tab">My Story</a></li>
                         <li role="presentation"><a href="#tab-personality" aria-controls="tab-personality" role="tab" data-toggle="tab">Personality</a></li>
@@ -85,7 +110,7 @@
                         <div role="tabpanel" class="tab-pane active" id="tab-my-story">
                         Since I was very young I have explored the unknown within <strong>computer science</strong>. I joined a computer science club at the age of 7 and I soon started coding in BASIC, before I advanced to Pascal language. <br><br>
 
-                        I jumped from one field to another trying to find one that fits me best and I ended up in Web Development, earlier I had tried game development, <strong>ethical hacking</strong>, and 3D design. I have studied web development for a long time now and I am on my way to becoming a <strong>professional</strong> with excellent knowledge of my toolset and providing the highest standards of coding practices. <br><br>
+                        I jumped from one field to another trying to find one that fits me best and I ended up in web development, earlier I had tried game development, <strong>ethical hacking</strong>, and 3D design. I have studied web development for a long time now and I am on my way to becoming a <strong>professional</strong> with excellent knowledge of my toolset and providing the highest standards of coding practices. <br><br>
 
                         <strong>I love web development</strong> because I can work with both designs and complex algorithms - it never stops changing. 
                         </div>
@@ -114,7 +139,7 @@
 
 
     <!-- Skills Section -->
-    <section id="skills" class="blue-section fade">
+    <section id="skills" class="blue-section scrollreveal">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 section-head">
@@ -124,19 +149,19 @@
                 </div>
             </div>
             <div class="row" id="skills-charts">
-                <div class="col-sm-3 col-xs-6">
+                <div class="col-sm-3 col-xs-6 graphs">
                     <div class="chart" data-percent="90">90%</div>
                     <h3>HTML5</h3>
                 </div>
-                <div class="col-sm-3 col-xs-6">
+                <div class="col-sm-3 col-xs-6 graphs">
                     <div class="chart" data-percent="85">85%</div>
                     <h3>CSS3</h3>
                 </div>
-                <div class="col-sm-3 col-xs-6">
+                <div class="col-sm-3 col-xs-6 graphs">
                     <div class="chart" data-percent="70">70%</div>
                     <h3>JS</h3>
                 </div>
-                <div class="col-sm-3 col-xs-6">
+                <div class="col-sm-3 col-xs-6 graphs">
                     <div class="chart" data-percent="60">60%</div>
                     <h3>PHP7</h3>
                 </div>
@@ -171,7 +196,7 @@
     
     
     <!-- Blog Section -->
-    <section id="blog" class="fade">
+    <section id="blog" class="scrollreveal">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 section-head">
@@ -181,7 +206,7 @@
                 </div>
             </div>
             <div class="row" id="blog-posts">
-                <div class="col-sm-4">
+                <div class="col-sm-4 each">
                     <div class="thumbnail">
                         <img src="http://via.placeholder.com/450x350" alt="...">
                         <div class="caption">
@@ -191,7 +216,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 each">
                     <div class="thumbnail">
                         <img src="http://via.placeholder.com/450x350" alt="...">
                         <div class="caption">
@@ -201,7 +226,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 each">
                     <div class="thumbnail">
                         <img src="http://via.placeholder.com/450x350" alt="...">
                         <div class="caption">
@@ -217,7 +242,7 @@
     <!-- Blog Section End -->
     
     <!-- Portfolio Section -->
-    <section id="portfolio" class="blue-section fade">
+    <section id="portfolio" class="blue-section scrollreveal">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 section-head">
@@ -235,20 +260,20 @@
                         <div class="btn btn-default" data-filter=".laravel">Laravel</div>
                     </div>
                     <div class="grid" id="isotope-items">
-                        <div class="grid-item front-end back-end laravel">
-                            <img src="http://via.placeholder.com/250x150" alt="...">
+                        <div class="grid-item front-end back-end laravel each">
+                            <img src="http://via.placeholder.com/250x250" alt="...">
                             <h3>Blog</h3>
                         </div>
-                        <div class="grid-item front-end back-end">
-                            <img src="http://via.placeholder.com/250x150" alt="...">
+                        <div class="grid-item front-end back-end each"> 
+                            <img src="http://via.placeholder.com/250x250" alt="...">
                             <h3>Current website</h3>
                         </div>
-                        <div class="grid-item front-end back-end">
-                            <img src="http://via.placeholder.com/250x150" alt="...">
+                        <div class="grid-item front-end back-end each">
+                            <img src="http://via.placeholder.com/250x250" alt="...">
                             <h3>Previous Portfolio Website</h3>
                         </div>
-                        <div class="grid-item front-end">
-                            <img src="http://via.placeholder.com/250x150" alt="...">
+                        <div class="grid-item front-end each">
+                            <img src="http://via.placeholder.com/250x250" alt="...">
                             <h3>First Portfolio Website</h3>
                         </div>
                     </div>
@@ -260,7 +285,7 @@
     
 
     <!-- Contact Section -->
-    <section id="contact" class="fade">
+    <section id="contact" class="scrollreveal">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 section-head">
@@ -292,29 +317,29 @@
     <!-- Contact Section End -->
 
     <!-- Footer -->
-    <footer>
+    <footer class="scrollreveal">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
                     <div id="social">
                         <div class="clearfix">
-                            <div class="social-icon">
+                            <div class="social-icon each">
                                 <a href="https://www.facebook.com/ernests.millers"><img src="images/facebook.png" alt=""></a>
                                 <h4>Facebook</h4>
                             </div>
-                            <div class="social-icon">
+                            <div class="social-icon each">
                                 <a href="https://www.linkedin.com/in/ernests-millers-12731ab6/?ppe=1"><img src="images/linkedin.png" alt=""></a>
                                 <h4>LinkedIn</h4>
                             </div>
-                            <div class="social-icon">
+                            <div class="social-icon each">
                                 <a href="https://github.com/ErnestsMillers"><img src="images/github.png" alt=""></a>
                                 <h4>GitHub</h4>
                             </div>
-                            <div class="social-icon">
+                            <div class="social-icon each">
                                 <a href="https://twitter.com/ernestsmillers"><img src="images/twitter.png" alt=""></a>
                                 <h4>Twitter</h4>
                             </div>
-                            <div class="social-icon">
+                            <div class="social-icon each">
                                 <a href="https://plus.google.com/u/0/111264496310279404813"><img src="images/googleplus.png" alt=""></a>
                                 <h4>Google Plus</h4>
                             </div>
@@ -334,6 +359,7 @@
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
     <script src="../node_modules/isotope-layout/dist/isotope.pkgd.min.js"></script>
+    <script src="../node_modules/scrollreveal/dist/scrollreveal.min.js"></script>
     <script src="../bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
     <script src="scripts/vendor/bars.js"></script>
     <script src="scripts/vendor/particles.min.js"></script>

@@ -10,6 +10,37 @@
 	#social {
 		width: 90%;
 	}
+
+	#centered-nav {
+	    margin-left: 0;
+	}
+
+	.nav.navbar-nav.navbar-right {
+		margin-left: 1%;
+	}
+
+	.nav.navbar-nav {
+	    height: auto;
+	    margin-bottom: 0;
+	}
+
+	.navbar-header {
+		height: 70px;
+	}
+
+	.navbar-toggle {
+		margin: 18px 15px 18px 0;
+	}
+
+	.navbar {
+		opacity: 1;
+		border-bottom: 1px solid #ffffff;
+
+	}
+
+	.icon-bar {
+		background-color: #ffffff !important;
+	}
 }
 
 @media only screen and (max-width: 1100px) {
