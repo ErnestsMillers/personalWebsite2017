@@ -269,9 +269,9 @@
                     <div class="grid" id="isotope-items">
                         <div class="grid-item front-end back-end laravel each">
                             <div class="content">
-                                <a href="http://via.placeholder.com/250x250" target="_blank">
+                                <a href="http://via.placeholder.com/250x250" target="_blank" data-toggle="modal" data-target="#blog-website-modal">
                                     <div class="content-overlay"></div>
-                                    <img class="content-image" src="http://via.placeholder.com/250x250">
+                                    <img class="content-image" src="/images/fourth-website.png">
                                     <div class="content-details fadeIn-bottom">
                                         <h3 class="content-title">Blog</h3>
                                     </div>
@@ -280,9 +280,9 @@
                         </div>
                         <div class="grid-item front-end back-end each">
                             <div class="content">
-                                <a href="http://via.placeholder.com/250x250" target="_blank">
+                                <a href="http://via.placeholder.com/250x250" target="_blank" data-toggle="modal" data-target="#current-website-modal">
                                     <div class="content-overlay"></div>
-                                    <img class="content-image" src="http://via.placeholder.com/250x250">
+                                    <img class="content-image" src="/images/third-website.png">
                                     <div class="content-details fadeIn-bottom">
                                         <h3 class="content-title">Current website</h3>
                                     </div>
@@ -291,9 +291,9 @@
                         </div>
                         <div class="grid-item front-end back-end each">
                             <div class="content">
-                                <a href="http://via.placeholder.com/250x250" target="_blank">
+                                <a href="http://via.placeholder.com/250x250" target="_blank" data-toggle="modal" data-target="#second-website-modal">
                                     <div class="content-overlay"></div>
-                                    <img class="content-image" src="http://via.placeholder.com/250x250">
+                                    <img class="content-image" src="/images/second-website.png">
                                     <div class="content-details fadeIn-bottom">
                                         <h3 class="content-title">Previous Portfolio Website</h3>
                                     </div>
@@ -302,9 +302,9 @@
                         </div>
                         <div class="grid-item front-end each">
                             <div class="content">
-                                <a href="http://via.placeholder.com/250x250" target="_blank">
+                                <a href="http://via.placeholder.com/250x250" target="_blank" data-toggle="modal" data-target="#first-website-modal">
                                     <div class="content-overlay"></div>
-                                    <img class="content-image" src="http://via.placeholder.com/250x250">
+                                    <img class="content-image" src="/images/first-website.png">
                                     <div class="content-details fadeIn-bottom">
                                         <h3 class="content-title">First Portfolio Website</h3>
                                     </div>
@@ -331,15 +331,15 @@
             </div>
             <div class="row">
                 <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-                    <form>
+                    <form data-parsley-validate>
                         <div class="form-group">
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Your Name">
+                            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Your Email" minlength="6" data-parsley-minlength="6" maxlength="50" data-parsley-maxlength="50" required>
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Your Email">
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Your Name" type="email" data-parsley-type="email" maxlength="100" data-parsley-maxlength="100" minlength="6" data-parsley-minlength="6" required>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" rows="3" placeholder="Your Message Here"></textarea>
+                            <textarea class="form-control" rows="3" placeholder="Your Message Here" minlength="100" data-parsley-minlength="100" maxlength="1000" data-parsley-maxlength="1000" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-lg btn-default btn-block">Send Your Message</button>
                     </form>
@@ -388,7 +388,6 @@
     <!-- Footer End -->
 
     <!-- Blog Modal -->
-
     <div class="modal fade" id="blog-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -404,8 +403,88 @@
             </div>
         </div>
     </div>
-
     <!-- Blog Modal End -->
+
+    <!-- First Website Modal -->
+    <div class="modal fade" id="first-website-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">My First Website</h4>
+                </div>
+                <div class="modal-body">
+                    <p>This is the first website that I ever fully developed and finished. Previously I just had experience with web development and I thought I should finally develop a website for myself. I tried to keep website rather simple as this was my first and at that time too many features could ruin the website or make it unstable.<br/><br/>
+
+                    This website didn't have any animations or interaction but as I wanted to create somewhat professional work environment I managed to build my own gulp.js workflow. It was quite a challenge but I managed to implement browser-sync, and even started to use SASS preprocessor right away, gulp.js also watched any changes in SASS and processed them immediately. For a second I even thought of using Jade but I felt that I should not touch that for couple more websites. Sadly I didn't work with GitHub at that point and I only created a GitHub repo after the website was finished.</p>
+                    <div class="btn btn-default"><a href="https://github.com/ErnestsMillers/PersonalWebsite">GitHub</a></div>
+                    <div class="btn btn-default"><a href="projects/first-website/index.html">See Example</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- First Website Modal End -->
+
+    <!-- Second Website Modal -->
+    <div class="modal fade" id="second-website-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">My Second Website</h4>
+                </div>
+                <div class="modal-body">
+                    <p>After developing my first website I realized that it is just a beginning, I started learning JavaScript and jQuery and had my first attempts with PHP. I began working with animations and tried to improve the look of my websites as well the quality of my code. I researched SEO and HTML semantics and tried to improve my Git workflow. Overall, this was great improvement compared to my previous website.<br><br>
+
+                    A major setback of this website is that I lost half of it, I haven't got all of the projects that were there in full version because of my mistake. </p>
+                    <div class="btn btn-default"><a href="https://github.com/ErnestsMillers/My-First-Porfolio-Website">GitHub</a></div>
+                    <div class="btn btn-default"><a href="projects/second-website/index.html">See Example</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Second Website Modal End -->
+
+    <!-- First Website Modal -->
+    <div class="modal fade" id="current-website-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">My First Website</h4>
+                </div>
+                <div class="modal-body">
+                    <p>This website was developed just now and represents my abilities at a lot higher scale. I used knowledge gained from working within the company and right now I am very happy with the look and features of this website. I must say there are other small things that I would like to improve here when it comes to few animations or style but overall I improved a lot and learned a bit too as this is the best-looking website I have developed so far. <br><br>
+
+                    I used many JS libraries and I needed to read a lot of different documentation to make it work and I am getting better with organizing my SASS files.</p>
+                    <div class="btn btn-default"><a href="https://github.com/ErnestsMillers/personalWebsite2017">GitHub</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- First Website Modal End -->
+
+    <!-- First Website Modal -->
+    <div class="modal fade" id="blog-website-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Blog</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                    After creating few Laravel projects I decided to put together my front-end and back-end development skills to create beautiful, fully functional blog website, that has all blog features that you usually see. <br>
+                    This project is my first Laravel project that is put online, obviously, I have many others that just don't look as great as this one. I am running my development environment on Vagrant and I am styling website separately because for me Laravel front-end compiling is just too slow for me.<br><br>
+
+                    Currently, I am still working on it but it will be ready very soon.</p>
+                    <div class="btn btn-default"><a href="https://github.com/ErnestsMillers/LaravelBlog">GitHub</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- First Website Modal End -->
+   
 
 
 	<script src="scripts/main.js"></script>

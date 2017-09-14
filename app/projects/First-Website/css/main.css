@@ -1,0 +1,187 @@
+/* MAIN CSS */
+* {
+  box-sizing: border-box; }
+
+body {
+  font: 400 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+/* THIS IS MAIN SECTION */
+.main-section {
+  display: block;
+  position: relative;
+  text-align: center;
+  height: 800px;
+  background-image: url("../img/mountain3.jpg");
+  background-size: cover;
+  color: white; }
+
+.nav {
+  width: 100%;
+  position: absolute;
+  top: 20px;
+  /* "Ernests Millers on top of the page"/ */
+  text-transform: uppercase;
+  font-weight: 300;
+  word-spacing: 15px;
+  letter-spacing: 10px; }
+
+.main-section-content {
+  position: absolute;
+  width: 100%;
+  top: 350px; }
+
+.main-section-content > h1 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.5em;
+  letter-spacing: 10px; }
+
+.main-section-content > p {
+  font-style: italic;
+  font-weight: 300; }
+
+/*THIS IS SECTION STRUCTURE*/
+.white-bg {
+  background: #e5e5e5;
+  background: -moz-linear-gradient(top, #e5e5e5 0%, #fff 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #e5e5e5), color-stop(100%, #fff));
+  background: -webkit-linear-gradient(top, #e5e5e5 0%, #fff 100%);
+  background: -o-linear-gradient(top, #e5e5e5 0%, #fff 100%);
+  background: -ms-linear-gradient(top, #e5e5e5 0%, #fff 100%);
+  background: linear-gradient(to bottom, #e5e5e5 0%, #fff 100%);
+  color: #636fb9; }
+
+.blue-bg {
+  background: #7c8be8;
+  background: -moz-linear-gradient(top, #7c8be8 0%, #636fb9 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #7c8be8), color-stop(100%, #636fb9));
+  background: -webkit-linear-gradient(top, #7c8be8 0%, #636fb9 100%);
+  background: -o-linear-gradient(top, #7c8be8 0%, #636fb9 100%);
+  background: -ms-linear-gradient(top, #7c8be8 0%, #636fb9 100%);
+  background: linear-gradient(to bottom, #7c8be8 0%, #636fb9 100%);
+  color: white; }
+
+.title > h2 {
+  font-weight: 700;
+  font-size: 25px;
+  letter-spacing: 5px;
+  text-transform: uppercase; }
+
+.section-content {
+  padding: 100px 100px;
+  display: block;
+  overflow: auto; }
+
+.title {
+  float: left;
+  width: 20%; }
+
+.content {
+  float: right;
+  width: 80%; }
+
+/*THIS IS SKILLSET SECTION */
+.dual-col {
+  width: 50%;
+  float: left; }
+
+.progress-container {
+  width: 90%;
+  height: 0.7em;
+  position: relative;
+  margin-bottom: 30px;
+  background-color: #b1d7e7; }
+
+.progress-bar {
+  background: white;
+  height: 100%;
+  position: absolute;
+  line-height: inherit;
+  padding-left: 0; }
+
+/* THIS IS EDUCATION SECTION */
+.education-block {
+  padding-bottom: 25px; }
+
+/*THIS IS CONTACT SECTION */
+#social-network-img {
+  padding: 30px 10px 0 0; }
+
+/* THIS IS FOOTER SECTION */
+footer {
+  padding: 15px 60px; }
+  footer .footer-content {
+    letter-spacing: 1px;
+    color: #636fb9;
+    text-align: center; }
+
+.blue-line {
+  width: 20%;
+  height: 6px;
+  background: #636fb9;
+  overflow: hidden;
+  margin: 10px 0; }
+
+.white-line {
+  width: 20%;
+  height: 6px;
+  background: #fff;
+  overflow: hidden;
+  margin: 10px 0; }
+
+/* ---  TYPOGRAPHY  ---*/
+/*THIS IS ABOUT SECTION */
+#main-content-name {
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  word-spacing: 5px;
+  margin-bottom: 8px; }
+
+#about {
+  line-height: 1.5em;
+  font-size: 18px;
+  word-spacing: 7px;
+  letter-spacing: 1px; }
+
+/* THIS IS SKILLSET SECTION */
+.dual-col > h3 {
+  font-size: 15px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px; }
+
+/*THIS IS EDUCATION SECTION */
+small {
+  font-weight: 100;
+  clear: both;
+  font-size: 12px; }
+
+.education-block > h3 {
+  font-weight: 700;
+  letter-spacing: 1px;
+  word-spacing: 0px;
+  text-transform: uppercase;
+  font-size: 18px;
+  padding: 8px 0; }
+
+.education-block > p {
+  font-weight: 400;
+  font-size: 14px; }
+
+/* THIS IS CONTACT SECTION */
+#email {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: 700;
+  color: white; }
+
+#contact-p {
+  margin-bottom: 50px; }
+
+.fadeInBlock {
+  opacity: 0; }

@@ -1,0 +1,223 @@
+@media only screen and (max-width: 1300px) {
+
+    .section-wrapper {
+        width: 70%;
+    }
+
+    .footer-icons {
+        width: 60%;
+    }
+
+    .navbar-center{
+        width: 50%;
+    }
+
+}
+
+@media only screen and (max-width: 960px) {
+    #mainwrapper .box {
+        width: 150px;
+        height: 150px;
+    }
+
+    #mainwrapper .box .simple-caption, #mainwrapper .box .full-caption, #mainwrapper .box .fade-caption, #mainwrapper .box .slide-caption, #mainwrapper .box .rotate-caption, #mainwrapper .box .simple-caption-top {
+        width: 150px;
+    }
+
+    #mainwrapper .box .full-caption, #mainwrapper .box .fade-caption, #mainwrapper .box .slide-caption, #mainwrapper #box-5.box .rotate-caption {
+        padding: 15px;
+    }
+
+    #mainwrapper {
+        width: 510px;
+    }
+
+    .caption {
+        width: 150px;
+    }
+    #mainwrapper .box .slide-caption {
+        left: 150px;
+        height: 150px;
+    }
+
+    #image-1, #image-2, #image-3, #image-4, #image-5, #image-6 {
+        width: 150px;
+        height: 150px;
+    }
+
+    #mainwrapper #box-5.box .rotate-caption {
+        top: 150px;
+    }
+
+    #mainwrapper .box .rotate {
+        width: 150px;
+        height: 300px;
+    }
+
+    #mainwrapper #box-5.box .rotate-caption {
+        width: 150px;
+        height: 150px;
+    }
+
+    #mainwrapper .box .caption h3 {
+        font-size: 14px;
+    }
+
+    #mainwrapper .box .caption p {
+        font-size: 14px;
+        line-height: 1.5em;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .skillset-example{
+        width: 50%;
+    }
+
+    .contact-details, .message-form, #name, #email, #comments {
+        width: 100%;
+    }
+}
+
+
+
+@media only screen and (max-width: 767px) {
+
+    .footer-icons {
+        width: 80%;
+    }
+
+    .section-container {
+        padding: 60px 0 60px 0;
+    }
+
+    .hover-jump {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .splash {
+        width: 300px;
+    }
+
+    .pageheader {
+        font-size: 60px;
+    }
+
+    .splash-container {
+        padding: 50px 0 100px 0;
+        height: 300px;
+    }
+
+    .navbar {
+        padding-bottom: 20px;
+    }
+
+    .box {
+        display: block;
+    }
+
+}
+
+@media only screen and (max-width: 750px) {
+    #mainwrapper {
+        width: 340px;
+    }
+}
+
+@media only screen and (max-width: 530px) {
+
+    .skillset-example{
+        width: 50%;
+    }
+
+    .resume-button {
+        font-size: 14px;
+    }
+
+    .section-wrapper {
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 400px) {
+
+
+    #mainwrapper {
+        width: 280px;
+    }
+
+    #mainwrapper .box {
+        width: 120px;
+        height: 120px;
+    }
+
+    #mainwrapper .box .simple-caption, #mainwrapper .box .full-caption, #mainwrapper .box .fade-caption, #mainwrapper .box .slide-caption, #mainwrapper .box .rotate-caption, #mainwrapper .box .simple-caption-top {
+        width: 120px;
+    }
+
+
+    .caption {
+        width: 120px;
+    }
+    #mainwrapper .box .slide-caption {
+        left: 120px;
+        height: 120px;
+    }
+
+    #image-1, #image-2, #image-3, #image-4, #image-5, #image-6 {
+        width: 120px;
+        height: 120px;
+    }
+
+    #mainwrapper #box-5.box .rotate-caption {
+        top: 120px;
+    }
+
+    #mainwrapper .box .rotate {
+        width: 120px;
+        height: 240px;
+    }
+
+    #mainwrapper #box-5.box .rotate-caption {
+        width: 120px;
+        height: 120px;
+    }
+
+    #mainwrapper .box .caption h3 {
+        font-size: 11px;
+        line-height: 1em;
+    }
+
+    #mainwrapper .box .caption p {
+        font-size: 11px;
+        line-height: 1.2em;
+    }
+}
+
+
+@media only screen and (max-width: 1350px) {
+
+    .projectstabout{
+        padding: 100px 100px;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+
+    .projectstabout{
+        padding: 100px 30px;
+    }
+}
+@media only screen and (max-width: 615px) {
+    .projectstaboutlinks{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .projectstabout {
+        padding: 30px 30px;
+    }
+
+    .projectstabouttext {
+        padding: 0
+    }
+}

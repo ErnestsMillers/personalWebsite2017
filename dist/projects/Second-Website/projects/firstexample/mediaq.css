@@ -1,0 +1,55 @@
+@media only screen and (max-width: 1200px) {
+	.title {
+	  width: 40%;
+	}
+
+  .content {
+    width: 60%;
+  }
+
+  .section-content .content > div {
+    padding-left: 0;
+  }
+
+  .section-content {
+    padding: 60px 30px;
+  }
+
+  .title img {
+    margin-bottom: 20px;
+  }
+
+  .dual-col {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+	.title, .content {
+	  width: 100%;
+	}
+
+  .section-content {
+    padding: 60px 30px;
+  }
+
+  .progress-bar {
+    width: 100%;
+  }
+
+  .main-section h1 {
+    font-size: 30px;
+  }
+
+  .main-section {
+    height: 470px;
+  }
+
+  .main-section-content{
+      top: 200px
+  }
+
+#email {
+      font-size: 14px
+  }
+}

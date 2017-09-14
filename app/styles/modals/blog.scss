@@ -1,4 +1,5 @@
-#blog-modal {
+.modal.fade {
+	z-index: 100000000000000000;
 	.modal-dialog {
 
 		margin-top: 200px;
@@ -22,6 +23,31 @@
 				p {
 					text-align: justify;
 				}
+
+
+				div {
+					margin-top: 20px;
+					border-radius: 0;
+					display: inline-block;
+				    border: 1px solid #e8eaf6;
+					padding: 8px 30px;
+				    text-transform: uppercase;
+				    letter-spacing: 1.3px;
+				    -webkit-transition: all 0.3s;
+				    transition: all 0.3s;
+				    background: #ffffff;
+				    margin-bottom: 15px !important;
+				}
+
+
+				div:hover {
+				    border: 1px solid #ffffff;
+					transition: all 0.5s;
+					background-color: #e8eaf6;
+					color: #000000;
+					text-decoration: none;
+					cursor: pointer;
+				}
 			}
 
 			.modal-footer {
@@ -30,6 +56,8 @@
 
 				}
 			}
+
+
 		}
 	}
 }
