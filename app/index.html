@@ -1,3 +1,35 @@
+<?php
+
+$to = 'ernestsmillers@gmail.com';
+$subject = 'Email from website';
+
+$name = $_POST['name'];
+$email = $_POST['email'];
+
+$message = $_POST['body'];
+
+$body = <<<EMAIL
+
+From $name
+
+$message
+
+My email $email
+EMAIL;
+
+$header = "From: $email";
+
+if($_POST){
+    if($name == '' || $email == '' || $message == ''){
+        $feedback = 'Please fill out all the fields';
+    }else {
+        mail($to, $subject, $body, $header);
+        $feedback = 'Thanks for your email';
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>  <html class="ie ie6 lte9 lte8 lte7 no-js"> <![endif]-->
 <!--[if IE 7]>     <html class="ie ie7 lte9 lte8 lte7 no-js"> <![endif]-->
@@ -331,15 +363,16 @@
             </div>
             <div class="row">
                 <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-                    <form data-parsley-validate>
+                    <p id="feedback"><?php echo $feedback; ?></p>
+                    <form data-parsley-validate method="POST" action="#contact">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Your Email" minlength="6" data-parsley-minlength="6" maxlength="50" data-parsley-maxlength="50" required>
+                            <input type="text" class="form-control" name="name" id="exampleInputPassword1" placeholder="Your Name" minlength="6" data-parsley-minlength="6" maxlength="50" data-parsley-maxlength="50" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Your Name" type="email" data-parsley-type="email" maxlength="100" data-parsley-maxlength="100" minlength="6" data-parsley-minlength="6" required>
+                            <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Your Email" type="email" data-parsley-type="email" maxlength="100" data-parsley-maxlength="100" minlength="6" data-parsley-minlength="6" required>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" rows="3" placeholder="Your Message Here" minlength="100" data-parsley-minlength="100" maxlength="1000" data-parsley-maxlength="1000" required></textarea>
+                            <textarea class="form-control" name="body" rows="3" placeholder="Your Message Here" minlength="100" data-parsley-minlength="100" maxlength="1000" data-parsley-maxlength="1000" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-lg btn-default btn-block">Send Your Message</button>
                     </form>
