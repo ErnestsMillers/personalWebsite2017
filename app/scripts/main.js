@@ -43,9 +43,11 @@ $(function() {
     $( window ).scroll(function() {
     	if ($( window ).scrollTop() > 0) {
     		$('nav').addClass('scrolled-nav');
+    		$('.navbar-toggle').addClass('navbar-scrolled');
     		$('#go-to-blog, #centered-nav > li > a, #navbar-brand').addClass('scrolled-nav-color');
     	} else {
     		$('nav').removeClass('scrolled-nav');
+    		$('.navbar-toggle').removeClass('navbar-scrolled');
     		$('#go-to-blog, #centered-nav > li > a, #navbar-brand').removeClass('scrolled-nav-color');
 
     	}

@@ -1,3 +1,35 @@
+<?php
+
+$to = 'ernestsmillers@gmail.com';
+$subject = 'Email from website';
+
+$name = $_POST['name'];
+$email = $_POST['email'];
+
+$message = $_POST['body'];
+
+$body = <<<EMAIL
+
+From $name
+
+$message
+
+My email $email
+EMAIL;
+
+$header = "From: $email";
+
+if($_POST){
+    if($name == '' || $email == '' || $message == ''){
+        $feedback = 'Please fill out all the fields';
+    }else {
+        mail($to, $subject, $body, $header);
+        $feedback = 'Thanks for your email';
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>  <html class="ie ie6 lte9 lte8 lte7 no-js"> <![endif]-->
 <!--[if IE 7]>     <html class="ie ie7 lte9 lte8 lte7 no-js"> <![endif]-->
@@ -20,7 +52,7 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 
-	<body>
+	<body data-spy="scroll" data-target="#bs-example-navbar-collapse-1">
 	<!--[if IE]>
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
@@ -36,8 +68,34 @@
     </div>
         
     <!-- Navigation -->
-    <nav>
-        
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#landing"><i class="fa fa-home" aria-hidden="true" id="navbar-brand"></i></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav" id="centered-nav">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#" id="go-to-blog" data-toggle="modal" data-target="#blog-modal">Go To Blog <i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
     </nav>
     <!-- Navigation End -->
 
@@ -55,7 +113,7 @@
 
     
     <!-- About Section -->
-    <section id="about" class="fade">
+    <section id="about" class="scrollreveal">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 section-head">
@@ -66,7 +124,7 @@
                 </div>                
             </div>
             <div class="row">
-                <div class="col-sm-3" id="about-personal-info">
+                <div class="col-sm-3 scrollreveal" id="about-personal-info">
                     <img src="images/me.jpg" alt="">
                     <h3>Personal Info</h3>
                     <div class="heading-line"></div>
@@ -75,7 +133,7 @@
                     <strong>Phone Number:</strong>
                     <h5>07771186717</h5>
                 </div>
-                <div class="col-sm-8 col-sm-offset-1" id="about-tabs">
+                <div class="col-sm-8 col-sm-offset-1 scrollreveal" id="about-tabs">
                      <ul class="nav nav-tabs" role="tablist">
                         <li role="presentation"  class="active"><a href="#tab-my-story" aria-controls="tab-my-story" role="tab" data-toggle="tab">My Story</a></li>
                         <li role="presentation"><a href="#tab-personality" aria-controls="tab-personality" role="tab" data-toggle="tab">Personality</a></li>
@@ -114,7 +172,7 @@
 
 
     <!-- Skills Section -->
-    <section id="skills" class="blue-section fade">
+    <section id="skills" class="blue-section scrollreveal">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 section-head">
@@ -124,19 +182,19 @@
                 </div>
             </div>
             <div class="row" id="skills-charts">
-                <div class="col-sm-3 col-xs-6">
+                <div class="col-sm-3 col-xs-6 graphs">
                     <div class="chart" data-percent="90">90%</div>
                     <h3>HTML5</h3>
                 </div>
-                <div class="col-sm-3 col-xs-6">
+                <div class="col-sm-3 col-xs-6 graphs">
                     <div class="chart" data-percent="85">85%</div>
                     <h3>CSS3</h3>
                 </div>
-                <div class="col-sm-3 col-xs-6">
+                <div class="col-sm-3 col-xs-6 graphs">
                     <div class="chart" data-percent="70">70%</div>
                     <h3>JS</h3>
                 </div>
-                <div class="col-sm-3 col-xs-6">
+                <div class="col-sm-3 col-xs-6 graphs">
                     <div class="chart" data-percent="60">60%</div>
                     <h3>PHP7</h3>
                 </div>
@@ -171,7 +229,7 @@
     
     
     <!-- Blog Section -->
-    <section id="blog" class="fade">
+    <section id="blog" class="scrollreveal">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 section-head">
@@ -181,33 +239,39 @@
                 </div>
             </div>
             <div class="row" id="blog-posts">
-                <div class="col-sm-4">
+                <div class="col-sm-4 each">
                     <div class="thumbnail">
-                        <img src="http://via.placeholder.com/450x350" alt="...">
+                        <div class="thumbnail-image">
+                            <img src="/images/laravel.png" alt="..." data-toggle="modal" data-target="#blog-modal">
+                        </div>
                         <div class="caption">
-                            <h3>Blog Title</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu risus nisl. Cras convallis...</p>
-                            <a href="" class="blog-link"><p>Read More</p></a>
+                            <h3>Laravel Adventures</h3>
+                            <p>Laravel is absolutely amazing, I love the environment, my Vagrant setup and can't wait to jump into Vue.Js...</p>
+                            <a href="#" class="blog-link" data-toggle="modal" data-target="#blog-modal"><p>Read More</p></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 each">
                     <div class="thumbnail">
-                        <img src="http://via.placeholder.com/450x350" alt="...">
+                        <div class="thumbnail-image">
+                            <img src="/images/javascript-and-jquery-book.png" alt="..." data-toggle="modal" data-target="#blog-modal">
+                        </div>
                         <div class="caption">
-                            <h3>Blog Title</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu risus nisl. Cras convallis...</p>
-                            <a href="" class="blog-link"><p>Read More</p></a>
+                            <h3>JavaScript/jQuery Book</h3>
+                            <p>Well, this is second time me reading this book, it has so much valuable information you can't remember all of it...</p>
+                            <a href="#" class="blog-link" data-toggle="modal" data-target="#blog-modal"><p>Read More</p></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 each">
                     <div class="thumbnail">
-                        <img src="http://via.placeholder.com/450x350" alt="...">
+                        <div class="thumbnail-image">
+                            <img src="/images/htmlcsscodingguidelines.gif" alt="..." data-toggle="modal" data-target="#blog-modal">
+                        </div>
                         <div class="caption">
-                            <h3>Blog Title</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu risus nisl. Cras convallis...</p>
-                            <a href="" class="blog-link"><p>Read More</p></a>
+                            <h3>HTML/CSS Coding Guidelines</h3>
+                            <p>Recently, I found out about these O'Reilly 'Little Books', they are for free and they can be about anything...</p>
+                            <a href="#" class="blog-link" data-toggle="modal" data-target="#blog-modal"><p>Read More</p></a>
                         </div>
                     </div>
                 </div>
@@ -217,7 +281,7 @@
     <!-- Blog Section End -->
     
     <!-- Portfolio Section -->
-    <section id="portfolio" class="blue-section fade">
+    <section id="portfolio" class="blue-section scrollreveal">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 section-head">
@@ -235,21 +299,49 @@
                         <div class="btn btn-default" data-filter=".laravel">Laravel</div>
                     </div>
                     <div class="grid" id="isotope-items">
-                        <div class="grid-item front-end back-end laravel">
-                            <img src="http://via.placeholder.com/250x150" alt="...">
-                            <h3>Blog</h3>
+                        <div class="grid-item front-end back-end laravel each">
+                            <div class="content">
+                                <a href="http://via.placeholder.com/250x250" target="_blank" data-toggle="modal" data-target="#blog-website-modal">
+                                    <div class="content-overlay"></div>
+                                    <img class="content-image" src="/images/fourth-website.png">
+                                    <div class="content-details fadeIn-bottom">
+                                        <h3 class="content-title">Blog</h3>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
-                        <div class="grid-item front-end back-end">
-                            <img src="http://via.placeholder.com/250x150" alt="...">
-                            <h3>Current website</h3>
+                        <div class="grid-item front-end back-end each">
+                            <div class="content">
+                                <a href="http://via.placeholder.com/250x250" target="_blank" data-toggle="modal" data-target="#current-website-modal">
+                                    <div class="content-overlay"></div>
+                                    <img class="content-image" src="/images/third-website.png">
+                                    <div class="content-details fadeIn-bottom">
+                                        <h3 class="content-title">Current website</h3>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
-                        <div class="grid-item front-end back-end">
-                            <img src="http://via.placeholder.com/250x150" alt="...">
-                            <h3>Previous Portfolio Website</h3>
+                        <div class="grid-item front-end back-end each">
+                            <div class="content">
+                                <a href="http://via.placeholder.com/250x250" target="_blank" data-toggle="modal" data-target="#second-website-modal">
+                                    <div class="content-overlay"></div>
+                                    <img class="content-image" src="/images/second-website.png">
+                                    <div class="content-details fadeIn-bottom">
+                                        <h3 class="content-title">Previous Portfolio Website</h3>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
-                        <div class="grid-item front-end">
-                            <img src="http://via.placeholder.com/250x150" alt="...">
-                            <h3>First Portfolio Website</h3>
+                        <div class="grid-item front-end each">
+                            <div class="content">
+                                <a href="http://via.placeholder.com/250x250" target="_blank" data-toggle="modal" data-target="#first-website-modal">
+                                    <div class="content-overlay"></div>
+                                    <img class="content-image" src="/images/first-website.png">
+                                    <div class="content-details fadeIn-bottom">
+                                        <h3 class="content-title">First Portfolio Website</h3>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -260,7 +352,7 @@
     
 
     <!-- Contact Section -->
-    <section id="contact" class="fade">
+    <section id="contact" class="scrollreveal">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 section-head">
@@ -271,17 +363,16 @@
             </div>
             <div class="row">
                 <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-                    <form>
+                    <p id="feedback"><?php echo $feedback; ?></p>
+                    <form data-parsley-validate method="POST" action="#contact">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Your Name</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                            <input type="text" class="form-control" name="name" id="exampleInputPassword1" placeholder="Your Name" minlength="6" data-parsley-minlength="6" maxlength="50" data-parsley-maxlength="50" required>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Your Email</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Your Email" type="email" data-parsley-type="email" maxlength="100" data-parsley-maxlength="100" minlength="6" data-parsley-minlength="6" required>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" rows="3"></textarea>
+                            <textarea class="form-control" name="body" rows="3" placeholder="Your Message Here" minlength="100" data-parsley-minlength="100" maxlength="1000" data-parsley-maxlength="1000" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-lg btn-default btn-block">Send Your Message</button>
                     </form>
@@ -292,29 +383,29 @@
     <!-- Contact Section End -->
 
     <!-- Footer -->
-    <footer>
+    <footer class="scrollreveal">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
                     <div id="social">
                         <div class="clearfix">
-                            <div class="social-icon">
+                            <div class="social-icon each">
                                 <a href="https://www.facebook.com/ernests.millers"><img src="images/facebook.png" alt=""></a>
                                 <h4>Facebook</h4>
                             </div>
-                            <div class="social-icon">
+                            <div class="social-icon each">
                                 <a href="https://www.linkedin.com/in/ernests-millers-12731ab6/?ppe=1"><img src="images/linkedin.png" alt=""></a>
                                 <h4>LinkedIn</h4>
                             </div>
-                            <div class="social-icon">
+                            <div class="social-icon each">
                                 <a href="https://github.com/ErnestsMillers"><img src="images/github.png" alt=""></a>
                                 <h4>GitHub</h4>
                             </div>
-                            <div class="social-icon">
+                            <div class="social-icon each">
                                 <a href="https://twitter.com/ernestsmillers"><img src="images/twitter.png" alt=""></a>
                                 <h4>Twitter</h4>
                             </div>
-                            <div class="social-icon">
+                            <div class="social-icon each">
                                 <a href="https://plus.google.com/u/0/111264496310279404813"><img src="images/googleplus.png" alt=""></a>
                                 <h4>Google Plus</h4>
                             </div>
@@ -328,6 +419,105 @@
         </div>
     </footer>
     <!-- Footer End -->
+
+    <!-- Blog Modal -->
+    <div class="modal fade" id="blog-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Hey there!</h4>
+                </div>
+                <div class="modal-body">
+                    <h3>Thanks for clicking here!</h3><br>
+                    <p>I am afraid that blog is not quite ready. But don't worry I am probably working on it right now! The blog is being created with Laravel and will be joined with this website. <br><br></p>
+                    <h4>Stay tuned, it's coming!</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog Modal End -->
+
+    <!-- First Website Modal -->
+    <div class="modal fade" id="first-website-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">My First Website</h4>
+                </div>
+                <div class="modal-body">
+                    <p>This is the first website that I ever fully developed and finished. Previously I just had experience with web development and I thought I should finally develop a website for myself. I tried to keep website rather simple as this was my first and at that time too many features could ruin the website or make it unstable.<br/><br/>
+
+                    This website didn't have any animations or interaction but as I wanted to create somewhat professional work environment I managed to build my own gulp.js workflow. It was quite a challenge but I managed to implement browser-sync, and even started to use SASS preprocessor right away, gulp.js also watched any changes in SASS and processed them immediately. For a second I even thought of using Jade but I felt that I should not touch that for couple more websites. Sadly I didn't work with GitHub at that point and I only created a GitHub repo after the website was finished.</p>
+                    <div class="btn btn-default"><a href="https://github.com/ErnestsMillers/PersonalWebsite">GitHub</a></div>
+                    <div class="btn btn-default"><a href="projects/first-website/index.html">See Example</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- First Website Modal End -->
+
+    <!-- Second Website Modal -->
+    <div class="modal fade" id="second-website-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">My Second Website</h4>
+                </div>
+                <div class="modal-body">
+                    <p>After developing my first website I realized that it is just a beginning, I started learning JavaScript and jQuery and had my first attempts with PHP. I began working with animations and tried to improve the look of my websites as well the quality of my code. I researched SEO and HTML semantics and tried to improve my Git workflow. Overall, this was great improvement compared to my previous website.<br><br>
+
+                    A major setback of this website is that I lost half of it, I haven't got all of the projects that were there in full version because of my mistake. </p>
+                    <div class="btn btn-default"><a href="https://github.com/ErnestsMillers/My-First-Porfolio-Website">GitHub</a></div>
+                    <div class="btn btn-default"><a href="projects/second-website/index.html">See Example</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Second Website Modal End -->
+
+    <!-- First Website Modal -->
+    <div class="modal fade" id="current-website-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">My First Website</h4>
+                </div>
+                <div class="modal-body">
+                    <p>This website was developed just now and represents my abilities at a lot higher scale. I used knowledge gained from working within the company and right now I am very happy with the look and features of this website. I must say there are other small things that I would like to improve here when it comes to few animations or style but overall I improved a lot and learned a bit too as this is the best-looking website I have developed so far. <br><br>
+
+                    I used many JS libraries and I needed to read a lot of different documentation to make it work and I am getting better with organizing my SASS files.</p>
+                    <div class="btn btn-default"><a href="https://github.com/ErnestsMillers/personalWebsite2017">GitHub</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- First Website Modal End -->
+
+    <!-- First Website Modal -->
+    <div class="modal fade" id="blog-website-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Blog</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                    After creating few Laravel projects I decided to put together my front-end and back-end development skills to create beautiful, fully functional blog website, that has all blog features that you usually see. <br>
+                    This project is my first Laravel project that is put online, obviously, I have many others that just don't look as great as this one. I am running my development environment on Vagrant and I am styling website separately because for me Laravel front-end compiling is just too slow for me.<br><br>
+
+                    Currently, I am still working on it but it will be ready very soon.</p>
+                    <div class="btn btn-default"><a href="https://github.com/ErnestsMillers/LaravelBlog">GitHub</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- First Website Modal End -->
+   
 
 
 	<script src="scripts/main.js"></script>
