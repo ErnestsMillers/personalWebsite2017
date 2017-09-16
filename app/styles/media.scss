@@ -4,6 +4,7 @@
 /* Small devices (tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
 	#landing-box {
+		margin-top: 150px;
 		text-align: center !important;
 	}
 
@@ -57,6 +58,14 @@
 
 	.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus, {
 	    height: 70px !important;
+	}
+
+	#isotope-items > .grid-item {
+	    width: 50%;
+
+	    .content {
+	    	width: 100%;
+	    }
 	}
 }
 
